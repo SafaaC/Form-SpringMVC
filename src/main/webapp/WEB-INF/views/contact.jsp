@@ -14,7 +14,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Registration Form</title>
 </head>
 <body>
 
@@ -22,20 +22,21 @@
 	<div class="container mt-5">
 	
 		<h3 class="text-center">Registration Form</h3>
-		<form action="/processform" method="post">
+		<form action="processform" method="post">
 			<div class="form-group">
-				<label for="userEmail">Email address</label> <input
-					type="email" class="form-control" id="userEmail"
-					aria-describedby="emailHelp" placeholder="Enter email">
+				<label for="userEmail">Email address</label>
+				 <input type="email" class="form-control" id="userEmail"
+					 placeholder="Enter email" name="userEmail">
 			</div>
 			<div class="form-group">
-				<label for="userName">User Name</label> <input
-					type="text" class="form-control" id="userName" placeholder="Enter user name">
+				<label for="userName">User Name</label> 
+				<input type="text" class="form-control" id="userName" 
+				placeholder="Enter user name" name="userName">
 			</div>
 			<div class="form-group">
-				<label for="UserPassword">Password</label> <input
-					type="password" class="form-control" id="UserPassword"
-					placeholder="Password">
+				<label for="UserPassword">Password</label>
+				 <input type="password" class="form-control" id="UserPassword"
+					placeholder="Password" name="userPassword">
 			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign up</button>
