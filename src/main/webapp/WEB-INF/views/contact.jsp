@@ -20,28 +20,28 @@
 
 
 	<div class="container mt-5">
-	
+
 		<h3 class="text-center">Registration Form</h3>
 		<form action="processform" method="post">
 			<div class="form-group">
-				<label for="userEmail">Email address</label>
-				 <input type="email" class="form-control" id="userEmail"
-					 placeholder="Enter email" name="userEmail">
+				<label for="userEmail">Email address</label> <input type="email"
+					class="form-control" id="userEmail" placeholder="Enter email"
+					name="userEmail">
 			</div>
 			<div class="form-group">
-				<label for="userName">User Name</label> 
-				<input type="text" class="form-control" id="userName" 
-				placeholder="Enter user name" name="userName">
+				<label for="userName">User Name</label> <input type="text"
+					class="form-control" id="userName" placeholder="Enter user name"
+					name="userName">
 			</div>
 			<div class="form-group">
-				<label for="UserPassword">Password</label>
-				 <input type="password" class="form-control" id="UserPassword"
-					placeholder="Password" name="userPassword">
+				<label for="UserPassword">Password</label> <input type="password"
+					class="form-control" id="UserPassword" placeholder="Password"
+					name="userPassword">
 			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign up</button>
 			</div>
-			
+
 		</form>
 
 	</div>

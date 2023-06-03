@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page isELIgnored ="false" %>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +18,18 @@
 </head>
 <body>
 
-	<h1 style="text-align: center;margin: 5%">Registration Successfull</h1>
+	<h1 style="text-align: center; margin: 5%">Registration
+		Successfull</h1>
 	<div class="container">
-		<h2>Welcome <i>${user.userName}</i></h2>
-		<h2>Your Email id is <i>${user.userEmail }</i></h2>
-		<h2>Secure your password <i>${user.userPassword }</i></h2>
+		<h2>
+			Welcome <i>${user.userName}</i>
+		</h2>
+		<h2>
+			Your Email id is <i>${user.userEmail }</i>
+		</h2>
+		<h2>
+			Secure your password <i>${user.userPassword }</i>
+		</h2>
 	</div>
 </body>
 </html>
