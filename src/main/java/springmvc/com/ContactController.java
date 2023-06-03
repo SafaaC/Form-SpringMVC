@@ -1,16 +1,21 @@
-package com;
+package springmvc.com;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import model.User;
+import springmvc.model.User;
+import springmvc.service.UserService;
+
 
 @Controller
 public class ContactController {
+	
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping("/contact")
 	public String showform() {
@@ -19,11 +24,12 @@ public class ContactController {
 	
 	//Using @ModelAttribute to get data from View to Controller
 	
-	 @RequestMapping(value ="/processform",method=RequestMethod.POST)
+	 @RequestMapping(value ="/processform",method = RequestMethod.POST)
 	  
-	  public String handleform(@ModelAttribute User user, Model model){
+	  public String handleform(@ModelAttribute("user") User user, Model model){
 	 //ModelAttribute will automatically bind the HTML form's field with the object and set it in the model
-	
+	System.out.println("hello");
+		 this.userService.createUser(user);
 	  return "success"; 
 	  }
 	
