@@ -29,10 +29,16 @@ public class ContactController {
 	  public String handleform(@ModelAttribute("user") User user, Model model){
 	 //ModelAttribute will automatically bind the HTML form's field with the object and set it in the model
 	System.out.println("hello");
+	
+	if(user.getUserName().isBlank()||user.getUserEmail().isBlank()||user.getUserPassword().isBlank()) {
+		System.out.println("Please Fill All The Fields");
+		return "redirect:/contact";
+	}
 		 this.userService.createUser(user);
 	  return "success"; 
 	  }
 	
+	 
 	 
 	 /*
 	 //Using @RequestParam to get data from View to Controller  

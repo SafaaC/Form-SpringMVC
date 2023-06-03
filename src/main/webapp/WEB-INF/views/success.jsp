@@ -19,7 +19,7 @@
 <body>
 
 	<h1 style="text-align: center; margin: 5%">Registration
-		Successfull</h1>
+		Successful</h1>
 	<div class="container">
 		<h2>
 			Welcome <i>${user.userName}</i>
