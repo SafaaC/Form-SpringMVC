@@ -27,6 +27,7 @@
 		<h2>
 			Your Email id is <i>${user.userEmail }</i>
 		</h2>
+		
 		<h2>
 			Secure your password <i>${user.userPassword }</i>
 		</h2>

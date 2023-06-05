@@ -38,6 +38,16 @@
 					class="form-control" id="UserPassword" placeholder="Password"
 					name="userPassword">
 			</div>
+			<div class="form-group">
+				<label for="UserGender">Gender	:&nbsp;</label>
+				 <input type="radio"  id="UserGender" value="Male" name="userGender">Male &nbsp;
+				 <input type="radio"  id="UserGender" value="Female" name="userGender">Female
+			</div>
+			<div class="form-group">
+				<label for="DOB">DOB</label> <input type="text"
+					class="form-control" id="UserDOB" placeholder="dd/mm/yyyy"
+					name="userDOB">
+			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign up</button>
 			</div>

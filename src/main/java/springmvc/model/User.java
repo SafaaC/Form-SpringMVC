@@ -1,5 +1,9 @@
 package springmvc.model;
 
+
+
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +18,20 @@ public class User {
 	private String userName;  //same name as in tag of html form
 	private String userEmail;
 	private String userPassword;
+	private String userGender;
+	private Date userDOB;
+	public String getUserGender() {
+		return userGender;
+	}
+	public void setUserGender(String userGender) {
+		this.userGender = userGender;
+	}
+	public Date getUserDOB() {
+		return userDOB;
+	}
+	public void setUserDOB(Date userDOB) {
+		this.userDOB = userDOB;
+	}
 	public String getUserName() {
 		return userName;
 	}
@@ -40,7 +58,9 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + "]";
+		return "User [id=" + id + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword="
+				+ userPassword + ", userGender=" + userGender + ", userDOB=" + userDOB + "]";
 	}
+	
 	
 }
