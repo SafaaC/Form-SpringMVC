@@ -16,6 +16,7 @@ public class UserDao {
 	
 	@Transactional
 	public int saveUser(User user) {
+		hibernateTemplate.save(user.getAddress());
 		Integer result=(Integer) this.hibernateTemplate.save(user);
 		return result;
 	}

@@ -27,6 +27,9 @@
 		<h2>
 			Your Email id is <i>${user.userEmail }</i>
 		</h2>
+		<h2>
+			Your Address is <i>${user.address.district }</i>  <i>${user.address.state }</i>
+		</h2>
 		
 		<h2>
 			Secure your password <i>${user.userPassword }</i>

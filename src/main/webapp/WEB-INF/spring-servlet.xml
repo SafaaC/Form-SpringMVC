@@ -59,6 +59,9 @@
 				<value>
 					springmvc.model.User
 				</value>
+				<value>
+					springmvc.model.Address
+				</value>
 			</list>
 
 		</property>

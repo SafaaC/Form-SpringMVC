@@ -48,6 +48,21 @@
 					class="form-control" id="UserDOB" placeholder="dd/mm/yyyy"
 					name="userDOB">
 			</div>
+			
+			<div class="card">
+			<div class="card-body">
+			<p>Your Address</p>
+			<div class="form-group">
+				<input type="text" class="form-control" name="address.street" placeholder="Enter street">
+			<div class="form-group">
+				<input type="text" class="form-control" name="address.city" placeholder="Enter city">
+			<div class="form-group">
+				<input type="text" class="form-control" name="address.district" placeholder="Enter district">
+			<div class="form-group">
+				<input type="text" class="form-control" name="address.state" placeholder="Enter state">
+			</div>
+			</div>
+			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign up</button>
 			</div>
