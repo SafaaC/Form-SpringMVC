@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,10 +17,10 @@
 
 <title>Registration Form</title>
 </head>
-<body>
+<body style="background-image: url('resource/image/bg.jpg');">
 
 
-	<div class="container mt-5">
+	<div class="container mt-5 w-50">
 
 		<h3 class="text-center">Registration Form</h3>
 		<form action="processform" method="post">
@@ -39,31 +40,36 @@
 					name="userPassword">
 			</div>
 			<div class="form-group">
-				<label for="UserGender">Gender	:&nbsp;</label>
-				 <input type="radio"  id="UserGender" value="Male" name="userGender">Male &nbsp;
-				 <input type="radio"  id="UserGender" value="Female" name="userGender">Female
+				<label for="UserGender">Gender :&nbsp;</label> <input type="radio"
+					id="UserGender" value="Male" name="userGender">Male &nbsp;
+				<input type="radio" id="UserGender" value="Female" name="userGender">Female
 			</div>
 			<div class="form-group">
-				<label for="DOB">DOB</label> <input type="text"
-					class="form-control" id="UserDOB" placeholder="dd/mm/yyyy"
-					name="userDOB">
+				<label for="DOB">DOB</label> <input type="text" class="form-control"
+					id="UserDOB" placeholder="dd/mm/yyyy" name="userDOB">
 			</div>
-			
-			<div class="card">
-			<div class="card-body">
 			<p>Your Address</p>
-			<div class="form-group">
-				<input type="text" class="form-control" name="address.street" placeholder="Enter street">
-			<div class="form-group">
-				<input type="text" class="form-control" name="address.city" placeholder="Enter city">
-			<div class="form-group">
-				<input type="text" class="form-control" name="address.district" placeholder="Enter district">
-			<div class="form-group">
-				<input type="text" class="form-control" name="address.state" placeholder="Enter state">
-			</div>
-			</div>
-			</div>
-			<div class="container text-center">
+			
+				<div class="card-body">
+					<div class="form-group">
+						<input type="text" class="form-control" name="address.street"
+							placeholder="Enter street">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="address.city"
+							placeholder="Enter city">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="address.district"
+							placeholder="Enter district">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="address.state"
+							placeholder="Enter state">
+					</div>
+				</div>
+		
+			<div class="container text-center  mb-5">
 				<button type="submit" class="btn btn-success">Sign up</button>
 			</div>
 
