@@ -23,7 +23,7 @@
 	<div class="container mt-5 w-50">
 
 		<h3 class="text-center">Registration Form</h3>
-		<form action="processform" method="post">
+		<form action="processform" method="post" enctype= multipart/form-data>
 			<div class="form-group">
 				<label for="userEmail">Email address</label> <input type="email"
 					class="form-control" id="userEmail" placeholder="Enter email"
@@ -49,26 +49,30 @@
 					id="UserDOB" placeholder="dd/mm/yyyy" name="userDOB">
 			</div>
 			<p>Your Address</p>
-			
-				<div class="card-body">
-					<div class="form-group">
-						<input type="text" class="form-control" name="address.street"
-							placeholder="Enter street">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="address.city"
-							placeholder="Enter city">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="address.district"
-							placeholder="Enter district">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="address.state"
-							placeholder="Enter state">
-					</div>
+
+			<div class="card-body">
+				<div class="form-group">
+					<input type="text" class="form-control" name="address.street"
+						placeholder="Enter street">
 				</div>
-		
+				<div class="form-group">
+					<input type="text" class="form-control" name="address.city"
+						placeholder="Enter city">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="address.district"
+						placeholder="Enter district">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="address.state"
+						placeholder="Enter state">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="profile">Profile Image</label> <input
+					type="file" class="form-control-file" id="profile" name="profile">
+			</div>
+
 			<div class="container text-center  mb-5">
 				<button type="submit" class="btn btn-success">Sign up</button>
 			</div>

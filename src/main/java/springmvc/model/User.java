@@ -1,7 +1,6 @@
 package springmvc.model;
 
 
-
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -11,6 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
+
+
+
 
 
 @Entity
@@ -27,6 +30,8 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id")
 	private Address address;
+	
+	
 	public Address getAddress() {
 		return address;
 	}
