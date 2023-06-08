@@ -28,17 +28,19 @@
 			<div class="form-group">
 				<label for="userEmail">Email address</label> <input type="email"
 					class="form-control" id="userEmail" placeholder="Enter email"
-					name="userEmail">
+					name="userEmail" required>
 			</div>
 			<div class="form-group">
 				<label for="userName">User Name</label> <input type="text"
 					class="form-control" id="userName" placeholder="Enter user name"
-					name="userName">
+					name="userName" required>
 			</div>
 			<div class="form-group">
 				<label for="UserPassword">Password</label> <input type="password"
 					class="form-control" id="UserPassword" placeholder="Password"
-					name="userPassword">
+					name="userPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+					title="Must contain at least one number and one uppercase and lowercase letter,
+					 and at least 8 or more characters" required>
 			</div>
 			<div class="form-group">
 				<label for="UserGender">Gender :&nbsp;</label> <input type="radio"

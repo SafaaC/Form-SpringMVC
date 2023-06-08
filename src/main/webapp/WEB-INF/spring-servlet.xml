@@ -87,4 +87,12 @@
 		name="transactionManager">
 		<property name="sessionFactory" ref="factory"></property>
 	</bean>
+	
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+				<mvc:mapping path="/contact/"/>
+				<bean class= "springmvc.com.Interceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
