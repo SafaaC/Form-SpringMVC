@@ -11,9 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-
-
-
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
@@ -26,6 +24,7 @@ public class User {
 	private String userEmail;
 	private String userPassword;
 	private String userGender;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date userDOB;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id")

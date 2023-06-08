@@ -2,16 +2,20 @@ package springmvc.com;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.InputMismatchException;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 
@@ -34,7 +38,7 @@ public class ContactController {
 
 	@RequestMapping(value = "/processform", method = RequestMethod.POST)
 
-	public String handleform( @RequestParam("profile") CommonsMultipartFile file, @ModelAttribute("user") User user, Model model, HttpSession s) {
+	public String handleform( @RequestParam("profile") CommonsMultipartFile file, @ModelAttribute("user") User user, Model model, HttpSession s) throws Exception {
 		// ModelAttribute will automatically bind the HTML form's field with the object
 		// and set it in the model
 		
@@ -46,18 +50,26 @@ public class ContactController {
 		byte[] data= file.getBytes();
 		String path=s.getServletContext().getRealPath("/")+"WEB-INF"+ File.separator+"resource"+ File.separator+"image"+ File.separator+file.getOriginalFilename();
 		FileOutputStream fos;
-		try {
 			fos = new FileOutputStream(path);
 			fos.write(data);
 			fos.close();
 			model.addAttribute("filename",file.getOriginalFilename());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
 		
 		this.userService.createUser(user);
 		return "success";
+	}
+	
+	@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
+	@ExceptionHandler(value=InputMismatchException.class)
+	public String exceptionHandlerMismatch( Model m) {
+		m.addAttribute("exceptionType", "InputMismatch Exception");
+		return "exceptionpage";
+	}
+	
+	@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
+	@ExceptionHandler(value=Exception.class)
+	public String exceptionHandlerGeneric() {
+		return "exceptionpage";
 	}
 
 	/*
